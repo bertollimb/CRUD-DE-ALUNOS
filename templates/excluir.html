@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Excluir Aluno</h2>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno[0] }}</td>
+            <td>{{ aluno[1] }}</td>
+            <td>{{ aluno[2] }}</td>
+            <td>{{ aluno[3] }}</td>
+            <td>
+                <form action="{{ url_for('excluir') }}" method="POST">
+                    <input type="hidden" name="id" value="{{ aluno[0] }}">
+                    <button type="submit" class="btn btn-danger">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
