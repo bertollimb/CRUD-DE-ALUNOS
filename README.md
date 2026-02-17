@@ -27,18 +27,17 @@ O sistema permite:
 
 
 projeto/
-│
-├── app.py # Arquivo principal da aplicação Flask
-├── dB.py # Conexão com o banco de dados
-├── models.py # Criação da tabela
-├── banco.db # Arquivo do banco de dados SQLite
-│
-└── templates/
-    ├── base.html
-    ├── index.html
-    ├── adicionar.html
-    ├── atualizar.html
-    └── excluir.html
+- app.py # Arquivo principal da aplicação Flask
+- dB.py # Conexão com o banco de dados
+- models.py # Criação da tabela
+- banco.db # Arquivo do banco de dados SQLite
+
+── templates/
+- base.html
+- index.html
+- adicionar.html
+- atualizar.html
+- excluir.html
 
 ---
 
@@ -74,6 +73,28 @@ Atualização parcial é suportada.
 ### 4. Excluir aluno
 
 Remove permanentemente um aluno do banco de dados.
+
+---
+
+## Como executar o projeto
+
+### 1. Clonar ou baixar o projeto
+
+git clone <https://github.com/bertollimb/CRUD-DE-ALUNOS>
+ou baixe o arquivo .zip
+
+### 2. Instalar dependências
+- Instale o Flask:
+  pip install flask
+  
+### 3. Executar a aplicação
+- python app.py
+
+4. Abrir no navegador
+- Acesse:
+
+  http://127.0.0.1:5000
+
 
 ---
 
